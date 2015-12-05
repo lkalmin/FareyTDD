@@ -39,7 +39,7 @@ namespace UnitTests
       }
 
       [TestMethod]
-      public void TestLengthNBeginning()
+      public void TestLength4Beginning()
       {
          int n = 4;
          
@@ -47,7 +47,7 @@ namespace UnitTests
 
          // Compose start of result string
          string seqStart = string.Format("F{0}", n);
-         seqStart += "   = { 0/1";
+         seqStart += " = { 0/1";
          for (int i = n; i > 1; i--)
          {
             seqStart += string.Format(" 1/{0}", i);

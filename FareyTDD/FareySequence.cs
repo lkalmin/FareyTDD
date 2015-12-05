@@ -19,7 +19,8 @@ namespace FareyTDD
          int d = n;
          result += string.Format("{0}/{1} ", a, b);
 
-         if (n > 0)
+         // Compute successive terms
+         while (c <= n)
          {
             var k = (int)((n + b) / d);
             int aa = a;
