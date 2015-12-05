@@ -27,7 +27,7 @@ namespace UnitTests
       {
          var fs = new FareyTDD.FareySequence();
          string result = fs.Run(0);
-         Assert.AreNotSame("", result);
+         Assert.AreSame("", "F0 = { 0/0 }");
 
       }
    }
