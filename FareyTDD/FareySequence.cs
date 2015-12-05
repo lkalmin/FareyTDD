@@ -9,6 +9,11 @@ namespace FareyTDD
    /// </summary>
    public class FareySequence
    {
+      /// <summary>
+      /// Run Farey Sequence for order n
+      /// </summary>
+      /// <param name="n">order of sequence</param>
+      /// <returns>string of order n sequence</returns>
       public string Run(int n)
       {
          string result = "F" + n.ToString(CultureInfo.InvariantCulture) + " = { ";
