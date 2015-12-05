@@ -19,6 +19,19 @@ namespace FareyTDD
          int d = n;
          result += string.Format("{0}/{1} ", a, b);
 
+         if (n > 0)
+         {
+            var k = (int)((n + b) / d);
+            int aa = a;
+            int bb = b;
+
+            a = c;
+            b = d;
+            c = (k * c) - aa;
+            d = (k * d) - bb;
+            result += string.Format("{0}/{1} ", a, b);
+         }
+
          result += "}";
          return result;
       }

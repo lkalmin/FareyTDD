@@ -35,7 +35,7 @@ namespace UnitTests
       {
          var fs = new FareyTDD.FareySequence();
          string result = fs.Run(1);
-         Assert.AreEqual("F0 = { 0/1 1/1 }", result);
+         Assert.AreEqual("F1 = { 0/1 1/1 }", result);
       }
    }
 }
