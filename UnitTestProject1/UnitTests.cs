@@ -8,12 +8,21 @@ namespace UnitTests
    public class UnitTests
    {
       [TestMethod]
-      public void TestMethod1()
+      public void TestClassCreation()
       {
          var fs = new FareyTDD.FareySequence();
 
          bool result = fs.Run();
          Assert.IsTrue(result);
       }
+
+      [TestMethod]
+      public void TestAcceptInput()
+      {
+         var fs = new FareyTDD.FareySequence();
+         int n = fs.AcceptInput("6");
+         Assert.IsTrue(n > 0);
+      }
+
    }
 }

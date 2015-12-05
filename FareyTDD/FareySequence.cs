@@ -15,5 +15,10 @@ namespace FareyTDD
       {
          return true;
       }
+
+      public int AcceptInput(string inputStr)
+      {
+         return -1;
+      }
    }
 }
