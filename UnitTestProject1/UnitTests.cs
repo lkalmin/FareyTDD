@@ -37,5 +37,26 @@ namespace UnitTests
          string result = fs.Run(1);
          Assert.AreEqual("F1 = { 0/1 1/1 }", result);
       }
+
+      [TestMethod]
+      public void TestLengthNBeginning()
+      {
+         int n = 4;
+         
+         var fs = new FareyTDD.FareySequence();
+
+         // Compose start of result string
+         string seqStart = string.Format("F{0}", n);
+         seqStart += "   = { 0/1";
+         for (int i = n; i > 1; i--)
+         {
+            seqStart += string.Format(" 1/{0}", i);
+         }
+         var strLen = seqStart.Length;
+         
+         string result = fs.Run(n);
+
+         Assert.AreEqual(seqStart, result.Substring(0, strLen));
+      }
    }
 }
