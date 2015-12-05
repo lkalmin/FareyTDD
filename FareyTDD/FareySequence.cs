@@ -12,6 +12,14 @@ namespace FareyTDD
       public string Run(int n)
       {
          string result = "F" + n.ToString(CultureInfo.InvariantCulture) + " = { ";
+
+         int a = 0;
+         int b = 1;
+         int c = 1;
+         int d = n;
+         result += string.Format("{0}/{1} ", a, b);
+
+         result += "}";
          return result;
       }
 

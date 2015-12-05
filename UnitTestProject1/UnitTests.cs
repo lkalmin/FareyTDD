@@ -23,12 +23,11 @@ namespace UnitTests
       }
 
       [TestMethod]
-      public void TestLenght0()
+      public void TestLength0()
       {
          var fs = new FareyTDD.FareySequence();
          string result = fs.Run(0);
-         Assert.AreSame("", "F0 = { 0/0 }");
-
+         Assert.AreEqual("F0 = { 0/1 }", result);
       }
    }
 }
