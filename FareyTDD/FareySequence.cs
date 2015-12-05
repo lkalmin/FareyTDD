@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
+
 
 namespace FareyTDD
 {
@@ -13,7 +11,8 @@ namespace FareyTDD
    {
       public string Run(int n)
       {
-         return "";
+         string result = "F" + n.ToString(CultureInfo.InvariantCulture) + " = { ";
+         return result;
       }
 
       public int AcceptInput(string[] input)
