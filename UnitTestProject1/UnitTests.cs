@@ -20,7 +20,8 @@ namespace UnitTests
       public void TestAcceptInput()
       {
          var fs = new FareyTDD.FareySequence();
-         int n = fs.AcceptInput("6");
+         string[] input = { "6" };
+         int n = fs.AcceptInput(input);
          Assert.IsTrue(n > 0);
       }
 

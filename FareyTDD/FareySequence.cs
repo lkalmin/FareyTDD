@@ -16,9 +16,11 @@ namespace FareyTDD
          return true;
       }
 
-      public int AcceptInput(string inputStr)
+      public int AcceptInput(string[] input)
       {
-         return -1;
+         if (input.Length == 0) return -1;
+         var n = Convert.ToInt32(input[0]);
+         return n;
       }
    }
 }
