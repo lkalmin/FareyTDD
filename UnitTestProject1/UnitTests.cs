@@ -10,10 +10,7 @@ namespace UnitTests
       [TestMethod]
       public void TestClassCreation()
       {
-         var fs = new FareyTDD.FareySequence();
-
-         bool result = fs.Run();
-         Assert.IsTrue(result);
+         var fs = new FareyTDD.FareySequence();      
       }
 
       [TestMethod]
@@ -25,5 +22,13 @@ namespace UnitTests
          Assert.IsTrue(n > 0);
       }
 
+      [TestMethod]
+      public void TestLenght0()
+      {
+         var fs = new FareyTDD.FareySequence();
+         string result = fs.Run(0);
+         Assert.AreNotSame("", result);
+
+      }
    }
 }

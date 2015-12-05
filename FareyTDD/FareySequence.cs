@@ -11,9 +11,9 @@ namespace FareyTDD
    /// </summary>
    public class FareySequence
    {
-      public bool Run()
+      public string Run(int n)
       {
-         return true;
+         return "";
       }
 
       public int AcceptInput(string[] input)

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 
 namespace FareyTDD
 {
@@ -18,7 +15,16 @@ namespace FareyTDD
       static void Main(string[] args)
       {
          FareySequence fs = new FareySequence();
-         fs.Run();
+         int n = fs.AcceptInput(args);
+         if (n < 0)
+         {
+            Console.WriteLine("Input n value for Farey Sequence");
+            return;
+         }
+         var output = fs.Run(n);
+         Console.WriteLine("Farey Sequence of order " + n.ToString(CultureInfo.InvariantCulture));
+         Console.WriteLine();
+         Console.WriteLine(output);
       }
    }
 }
